@@ -1,5 +1,8 @@
 ﻿
-cmake_minimum_required (VERSION 3.8)
+cmake_minimum_required (VERSION 3.2)
+
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 # Включение горячей перезагрузки для компиляторов MSVC, если поддерживается.
 if (POLICY CMP0141)
@@ -7,10 +10,30 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("HW_05")
+project (HW_05 VERSION ${PROJECT_VESRION})
 
 add_executable (HW_05 "main.cpp" "main.h" "Document.h" "Document.cpp" "TFigureController.h" "TFigureController.cpp" "Models/BaseFigure.h" "Models/BaseFigure.cpp" "Common.h" "Common.cpp" "Models/Recangle.cpp" "Models/Square.h" "Models/Square.cpp" "Models/Circle.h" "Models/Circle.cpp" "Models/Ellipse.h" "Models/Ellipse.cpp" "Models/Line.h" "Models/Line.cpp" "View.h" "View.cpp")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET HW_05 PROPERTY CXX_STANDARD 20)
+set_target_properties(HW_05 PROPERTIES
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED ON
+)
+target_include_directories(HW_05 PRIVATE "${CMAKE_BINARY_DIR}")
+
+if (MSVC)
+    target_compile_options(HW_05 PRIVATE /W4)
+else ()
+    target_compile_options(HW_05 PRIVATE -Wall -Wextra -pedantic -Werror)
 endif()
+
+install(TARGETS HW_05 RUNTIME DESTINATION bin)
+
+set(CPACK_GENERATOR DEB)
+
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+
+set(CPACK_PACKAGE_CONTACT example@example.com)
+
+include(CPack)
