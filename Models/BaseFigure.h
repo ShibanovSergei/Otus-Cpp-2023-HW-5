@@ -1,6 +1,6 @@
 #include <fstream>
 
-#include "..\Common.h"
+#include "../Common.h"
 
 #pragma once
 
