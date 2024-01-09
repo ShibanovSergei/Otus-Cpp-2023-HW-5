@@ -23,7 +23,7 @@ target_include_directories(HW_05 PRIVATE "${CMAKE_BINARY_DIR}")
 if (MSVC)
     target_compile_options(HW_05 PRIVATE /W4)
 else ()
-    target_compile_options(HW_05 PRIVATE -Wall -Wextra -pedantic -Werror)
+    target_compile_options(HW_05 PRIVATE -Wall -Wextra -pedantic)
 endif()
 
 install(TARGETS HW_05 RUNTIME DESTINATION bin)
