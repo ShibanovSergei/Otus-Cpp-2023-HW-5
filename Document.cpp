@@ -1,7 +1,7 @@
 #include <fstream>
 
-#include "Models\BaseFigure.h"
-#include "Models\Circle.h"
+#include "Models/BaseFigure.h"
+#include "Models/Circle.h"
 #include "Document.h"
 
 void Document::AddFigure(BaseFigure* figure)

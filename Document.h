@@ -1,7 +1,7 @@
 #include <list>
-
-#include "Models\BaseFigure.h"
 #include <string>
+
+#include "Models/BaseFigure.h"
 
 class Document 
 {
