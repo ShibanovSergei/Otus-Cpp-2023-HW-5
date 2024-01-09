@@ -56,10 +56,22 @@ void Document::ReadFromFile(std::string fileName)
 
 			switch (type)
 			{
-			case FigureType::Circle:
-				//auto v = new Circle(fromFile);
-				//_figures.push_back((BaseFigure*)v);
-				break;
+				case FigureType::Circle:
+					//auto v = new Circle(fromFile);
+					//_figures.push_back((BaseFigure*)v);
+					break;
+
+				case FigureType::Ellipse:
+					break;
+
+				case FigureType::Line:
+					break;
+
+				case FigureType::Recangle:
+					break;
+
+				case FigureType::Square:
+					break;
 			}
 		}
 	}
