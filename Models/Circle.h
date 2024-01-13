@@ -2,6 +2,8 @@
 
 class Circle
 {
+public:
+	Circle(unsigned cX, unsigned cY, unsigned R) {};
 	Circle(std::ifstream& from);
 	virtual FigureType GetType();
 	virtual void Move(int dx, int dy);

@@ -2,8 +2,7 @@
 
 TFigureController::~TFigureController()
 {
-	for (auto doc : documents)
-		delete doc;
+	CloseAllDocs();
 }
 
 Document* TFigureController::CreateNewDoc()
@@ -20,3 +19,35 @@ void TFigureController::RepaintViews()
 {
 }
 
+void TFigureController::AddToCurDoc(BaseFigure* figure)
+{
+	curDoc->AddFigure(figure);
+}
+
+void TFigureController::SaveCurDoc(std::string fileName)
+{
+	curDoc->WriteToFile(fileName);
+}
+
+void TFigureController::CloseAllDocs()
+{
+	for (auto doc : documents)
+		delete doc;
+
+	documents.clear();
+}
+
+void TFigureController::OpenDoc(std::string fileName)
+{
+	auto openedDoc = new Document();
+	openedDoc->ReadFromFile(fileName);
+	documents.push_back(openedDoc);
+}
+
+void TFigureController::RemoveFromCurDoc(BaseFigure* figure)
+{
+	if (figure != nullptr)
+	{
+		curDoc->RemoveFigure(figure);
+	}
+}

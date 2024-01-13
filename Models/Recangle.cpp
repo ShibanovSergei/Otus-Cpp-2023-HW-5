@@ -1,7 +1,26 @@
-#include "BaseFigure.h"
+#include "Rectangle.h"
 
-class Rectangle : public BaseFigure
+Rectangle::Rectangle(std::ifstream& from)
 {
-public:
-	Point LeftLowCrn, RightUpperCrn;
-};
+	Deserialize(from);
+}
+
+FigureType Rectangle::GetType()
+{
+	return FigureType::Rectangle;
+}
+
+void Rectangle::Move(int dx, int dy)
+{
+	// Move circle.
+}
+
+char* Rectangle::Serialize()
+{
+	return (char*)"serialized Circle";
+}
+
+void Rectangle::Deserialize(std::ifstream& from)
+{
+	// Deserialize and set properties.
+}

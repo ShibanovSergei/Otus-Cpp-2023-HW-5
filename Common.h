@@ -9,7 +9,7 @@ enum class FigureType
     Circle,
     Ellipse,
     Line,
-    Recangle,
+    Rectangle,
     Square
 };
 

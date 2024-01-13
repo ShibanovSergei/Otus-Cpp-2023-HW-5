@@ -9,7 +9,11 @@ class TFigureController
 public:
 	Document* CreateNewDoc();
 	void RepaintViews();
-	//void ChangeCurDoc(Document *doc);
+	void AddToCurDoc(BaseFigure* figure);
+	void SaveCurDoc(std::string fileName);
+	void CloseAllDocs();
+	void OpenDoc(std::string fileName);
+	void RemoveFromCurDoc(BaseFigure* figure);
 
 	~TFigureController();
 

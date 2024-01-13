@@ -2,6 +2,10 @@
 
 #include "Models/BaseFigure.h"
 #include "Models/Circle.h"
+#include "Models/Ellipse.h"
+#include "Models/Line.h"
+#include "Models/Rectangle.h"
+#include "Models/Square.h"
 #include "Document.h"
 
 void Document::AddFigure(BaseFigure* figure)
@@ -32,7 +36,7 @@ void Document::WriteToFile(std::string fileName)
 	{
 		// write title (some general information).
 
-		for(auto figure: _figures)
+		for(BaseFigure* figure: _figures)
 		{
 			outFile << (short)figure->GetType() << figure->Serialize() << std::endl;
 		}		
@@ -57,21 +61,39 @@ void Document::ReadFromFile(std::string fileName)
 			switch (type)
 			{
 				case FigureType::Circle:
-					//auto v = new Circle(fromFile);
-					//_figures.push_back((BaseFigure*)v);
-					break;
+				{
+					auto circle = new Circle(fromFile);
+					_figures.push_back((BaseFigure*)circle);
+				}
+				break;
 
 				case FigureType::Ellipse:
-					break;
+				{
+					auto ellipse = new Ellipse(fromFile);
+					_figures.push_back((BaseFigure*)ellipse);
+				}
+				break;
 
 				case FigureType::Line:
-					break;
+				{
+					auto line = new Line(fromFile);
+					_figures.push_back((BaseFigure*)line);
+				}
+				break;
 
-				case FigureType::Recangle:
-					break;
+				case FigureType::Rectangle:
+				{
+					auto rectangle = new Rectangle(fromFile);
+					_figures.push_back((BaseFigure*)rectangle);
+				}
+				break;
 
 				case FigureType::Square:
-					break;
+				{
+					auto square = new Square(fromFile);
+					_figures.push_back((BaseFigure*)square);
+				}
+				break;
 			}
 		}
 	}

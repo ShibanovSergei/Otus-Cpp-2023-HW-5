@@ -1,5 +1,11 @@
 ﻿#include "main.h"
 #include "TFigureController.h"
+#include "Models/BaseFigure.h"
+#include "Models/Circle.h"
+#include "Models/Ellipse.h"
+#include "Models/Line.h"
+#include "Models/Rectangle.h"
+#include "Models/Square.h"
 
 using namespace std;
 
@@ -9,19 +15,22 @@ int main()
 
 	TFigureController controller;
 
-	//controller.CreateNewDoc();
+	controller.CreateNewDoc();
 
-	//controller.AddToCurDoc();
-	//controller.AddToCurDoc();
+	controller.AddToCurDoc((BaseFigure*)new Circle(10, 10, 5));
+	controller.AddToCurDoc((BaseFigure*)new Rectangle(40,40, 100, 100));
 	controller.RepaintViews();
 
-	//controller.SaveCurDoc("");
+	controller.SaveCurDoc("fileName");
 
-	//controller.CloseAllDocs();
+	controller.CloseAllDocs();
 	controller.RepaintViews();
 
-	//controller.ReadDoc("");
-	//controller.RemoveFromDoc();
+	controller.OpenDoc("fileName");
+
+	BaseFigure* figure = nullptr;	
+	// figure = ...  - User select figure for delete.
+	controller.RemoveFromCurDoc(figure);
 	controller.RepaintViews();
 
 	return 0;
