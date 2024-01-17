@@ -1,0 +1,11 @@
+<map id="Document.h" name="Document.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="83,5,173,31"/>
+<area shape="rect" id="Node000002" href="$Document_8cpp.html" title=" " alt="" coords="5,79,110,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,44,71,80,68,77,104,40"/>
+<area shape="rect" id="Node000003" href="$TFigureController_8h.html" title=" " alt="" coords="134,79,264,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,40,189,77,185,80,149,44"/>
+<area shape="rect" id="Node000004" href="$TFigureController_8cpp.html" title=" " alt="" coords="60,153,204,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="179,118,145,154,141,150,176,114"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="229,153,302,178"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="222,114,256,150,252,154,218,118"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="TFigureController.h" name="TFigureController.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="77,5,207,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,63,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,34,67,72,64,68,122,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="81,153,134,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,32,129,80,115,138,110,137,123,78,136,31"/>
+<area shape="rect" id="Node000004" href="$Document_8h.html" title=" " alt="" coords="138,79,229,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,30,171,64,166,67,147,33"/>
+<area shape="rect" id="Node000010" href="$View_8h.html" title=" " alt="" coords="253,79,314,105"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="167,29,247,69,244,74,165,34"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="172,107,133,144,129,140,169,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="160,153,199,178"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="185,105,184,137,178,137,180,105"/>
+<area shape="rect" id="Node000006" href="$BaseFigure_8h.html" title=" " alt="" coords="222,153,366,178"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="204,103,264,142,261,146,201,107"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="209,226,275,252"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="288,180,262,215,258,212,283,177"/>
+<area shape="rect" id="Node000008" href="$Common_8h.html" title=" " alt="" coords="299,226,393,252"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="305,177,330,212,326,215,300,180"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="314,300,378,326"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="349,252,349,284,343,284,343,252"/>
+</map>
