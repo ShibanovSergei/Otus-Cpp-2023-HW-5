@@ -18,12 +18,20 @@ void Document::RemoveFigure(BaseFigure* figure)
 	for (auto fig = _figures.begin(); fig != _figures.end(); fig++)
 	{
 		if (*fig == figure)
-		{			
+		{	
+			delete* fig;
 			_figures.erase(fig);
-			delete *fig;
-
 			break;
 		}
+	}
+}
+
+Document::~Document()
+{
+	for (auto fig = _figures.begin(); fig != _figures.end(); fig++)
+	{
+		delete* fig;
+		_figures.erase(fig);
 	}
 }
 
